@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marvel Universe - tugas Informatika">
+  <title>Marvel Universe | Explore The Multiverse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home" aria-label="Marvel Universe Home">
+      <span class="brand-box">MARVEL</span>
+      <span class="brand-sub">UNIVERSE</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav id="navMenu">
+      <a href="#home" class="active">Home</a>
+      <a href="#heroes">Heroes</a>
+      <a href="#movies">Movies</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <p class="eyebrow">THE MARVEL CINEMATIC UNIVERSE</p>
+        <h1>EVERY HERO<br><span>HAS A STORY.</span></h1>
+        <p class="hero-text">Jelajahi karakter, film, dan momen ikonik dari semesta Marvel dalam satu tempat.</p>
+        <div class="hero-actions">
+          <a href="#heroes" class="btn btn-primary">EXPLORE HEROES <span>→</span></a>
+          <a href="#movies" class="btn btn-ghost">VIEW MOVIES</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>80+</strong><small>YEARS OF STORIES</small></div>
+          <div><strong>30+</strong><small>MCU FILMS</small></div>
+          <div><strong>1000+</strong><small>CHARACTERS</small></div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="section heroes" id="heroes">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MARVEL LEGENDS</p>
+          <h2>MEET THE <span>HEROES</span></h2>
+        </div>
+        <p class="section-note">Beberapa karakter paling ikonik dari Marvel Universe.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Cari karakter...">
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">ALL</button>
+          <button class="filter" data-filter="hero">HEROES</button>
+          <button class="filter" data-filter="avenger">AVENGERS</button>
+          <button class="filter" data-filter="cosmic">COSMIC</button>
+        </div>
+      </div>
+
+      <div class="hero-grid-cards" id="heroCards">
+        <article class="character-card" data-category="hero avenger" data-name="iron man">
+          <div class="card-image ironman"><span>01</span><div class="symbol">I</div></div>
+          <div class="card-body"><p>AVENGER</p><h3>IRON MAN</h3><span class="line"></span><small>Tony Stark</small></div>
+          <button class="more" data-character="ironman">VIEW PROFILE →</button>
+        </article>
+
+        <article class="character-card" data-category="hero avenger" data-name="captain america">
+          <div class="card-image cap"><span>02</span><div class="symbol">★</div></div>
+          <div class="card-body"><p>AVENGER</p><h3>CAPTAIN AMERICA</h3><span class="line"></span><small>Steve Rogers</small></div>
+          <button class="more" data-character="cap">VIEW PROFILE →</button>
+        </article>
+
+        <article class="character-card" data-category="hero cosmic" data-name="thor">
+          <div class="card-image thor"><span>03</span><div class="symbol">⚡</div></div>
+          <div class="card-body"><p>GOD OF THUNDER</p><h3>THOR</h3><span class="line"></span><small>Thor Odinson</small></div>
+          <button class="more" data-character="thor">VIEW PROFILE →</button>
+        </article>
+
+        <article class="character-card" data-category="hero avenger" data-name="black panther">
+          <div class="card-image panther"><span>04</span><div class="symbol">♛</div></div>
+          <div class="card-body"><p>WAKANDA</p><h3>BLACK PANTHER</h3><span class="line"></span><small>T'Challa</small></div>
+          <button class="more" data-character="panther">VIEW PROFILE →</button>
+        </article>
+
+        <article class="character-card" data-category="hero avenger" data-name="spider-man">
+          <div class="card-image spiderman"><span>05</span><div class="symbol">✦</div></div>
+          <div class="card-body"><p>WEB-SLINGER</p><h3>SPIDER-MAN</h3><span class="line"></span><small>Peter Parker</small></div>
+          <button class="more" data-character="spiderman">VIEW PROFILE →</button>
+        </article>
+
+        <article class="character-card" data-category="hero cosmic" data-name="captain marvel">
+          <div class="card-image marvel"><span>06</span><div class="symbol">✦</div></div>
+          <div class="card-body"><p>COSMIC HERO</p><h3>CAPTAIN MARVEL</h3><span class="line"></span><small>Carol Danvers</small></div>
+          <button class="more" data-character="marvel">VIEW PROFILE →</button>
+        </article>
+      </div>
+      <p class="empty" id="emptyState">Karakter tidak ditemukan.</p>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-mark">“</div>
+      <blockquote>With great power comes<br><span>great responsibility.</span></blockquote>
+      <p>— Peter Parker</p>
+    </section>
+
+    <section class="section movies" id="movies">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">THE SAGA CONTINUES</p>
+          <h2>MARVEL <span>ON SCREEN</span></h2>
+        </div>
+        <p class="section-note">Beberapa film penting dalam perjalanan Marvel Studios.</p>
+      </div>
+
+      <div class="movie-timeline">
+        <div class="movie-item">
+          <div class="movie-year">2008</div>
+          <div class="movie-dot"></div>
+          <div class="movie-content"><span>PHASE 1</span><h3>IRON MAN</h3><p>Awal perjalanan Marvel Cinematic Universe dan lahirnya Tony Stark sebagai Iron Man.</p></div>
+        </div>
+        <div class="movie-item">
+          <div class="movie-year">2012</div>
+          <div class="movie-dot"></div>
+          <div class="movie-content"><span>PHASE 1</span><h3>THE AVENGERS</h3><p>Para pahlawan bumi pertama kali bersatu menghadapi ancaman besar di New York.</p></div>
+        </div>
+        <div class="movie-item">
+          <div class="movie-year">2018</div>
+          <div class="movie-dot"></div>
+          <div class="movie-content"><span>PHASE 3</span><h3>BLACK PANTHER</h3><p>Memperkenalkan dunia Wakanda dan T'Challa sebagai pelindung negaranya.</p></div>
+        </div>
+        <div class="movie-item">
+          <div class="movie-year">2019</div>
+          <div class="movie-dot"></div>
+          <div class="movie-content"><span>PHASE 3</span><h3>AVENGERS: ENDGAME</h3><p>Babak besar Infinity Saga mencapai puncaknya dalam pertarungan melawan Thanos.</p></div>
+        </div>
+        <div class="movie-item">
+          <div class="movie-year">2021</div>
+          <div class="movie-dot"></div>
+          <div class="movie-content"><span>PHASE 4</span><h3>SPIDER-MAN: NO WAY HOME</h3><p>Peter Parker menghadapi konsekuensi ketika batas antarsemesta mulai terbuka.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="multiverse" id="about">
+      <div class="multiverse-content">
+        <p class="eyebrow">ONE UNIVERSE. MANY STORIES.</p>
+        <h2>WELCOME TO THE<br><span>MULTIVERSE.</span></h2>
+        <p>Marvel Universe bukan hanya tentang kekuatan super. Ini tentang pilihan, pengorbanan, persahabatan, dan perjalanan para karakter dalam menghadapi dunia yang terus berubah.</p>
+        <a href="#home" class="btn btn-primary">BACK TO TOP ↑</a>
+      </div>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orb orb-three"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-box">MARVEL</span><span>UNIVERSE</span></div>
+    <p>Website tugas Informatika • Dibuat untuk tujuan edukasi.</p>
+    <p class="copyright">© 2026 Marvel Universe Fan Project</p>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-visual" id="modalVisual"></div>
+      <div class="modal-info">
+        <p class="eyebrow" id="modalType"></p>
+        <h2 id="modalName"></h2>
+        <p class="modal-real" id="modalReal"></p>
+        <p id="modalDesc"></p>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
